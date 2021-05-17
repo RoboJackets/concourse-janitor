@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "concourse-janitor"
+version = "0"
+description = "Clean up resources from retired Concourse workers"
+authors = ["Kristaps Berzinch <kristapsberzinch@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+black = "^21.5b0"
+boto3 = "^1.17.69"
+flake8 = "*"
+flake8-black = "*"
+flake8-bugbear = "*"
+flake8-import-order = "*"
+flake8-json = "*"
+mypy = "*"
+pylint = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ["py38"]
+
+[tool.pylint.basic]
+disable = ["line-too-long"]
+
+[tool.pylint.format]
+expected-line-ending-format = "LF"
+max-line-length = 120
+
+[tool.pylint.variables]
+allow-global-unused-variables = false

@@ -1,2 +1,2 @@
 # concourse-janitor
-Cleans up resources from retired Concourse workers
+Clean up resources from retired Concourse workers
