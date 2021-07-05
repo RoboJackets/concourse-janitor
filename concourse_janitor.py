@@ -16,7 +16,7 @@ route53 = client("route53")
 sqs = client("sqs")
 
 
-def handler(event: None, context: None) -> None:  # pylint: disable=unused-argument,too-many-locals
+def handler(event: None, context: None) -> None:  # pylint: disable=unused-argument,too-many-locals,too-many-branches
     """
     Get currently running instances and delete any CloudWatch log groups, SQS queues, or Route 53 records associated
     with instances that don't exist
